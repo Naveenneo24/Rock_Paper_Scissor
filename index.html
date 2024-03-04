@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockpaperscissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="score"><span class="pan">Rock <br>Paper <br>Scissors</span>
+        <div class="computerscore"> computer score 
+             <span id="score-2">0</span>
+
+        </div>
+        <div class="userscore"> Your Score
+            <span id="score-1">0</span>
+        </div>
+    </div>
+    <div class="mainhand">   
+    <div class="hand" >
+<button class="choice" id="rock"><img src="rock.jpg" alt="rock"></button>
+<span id="line1"></span>
+<button class="choice" id="paper" ><img src="Paper.jpg" alt="paper"> </button>
+<span id="line2"></span>
+<button class="choice" id="scissor"><img src="scissor.jpg" alt="Scissor"></button>
+<span id="line3"></span>
+<div id="message"></div>
+</div> 
+
+
+<div id="win" style="display:none;">
+    <div class="tc" style="box-shadow: 0px 0px 10px 30px #2E9A25; border-radius: 100%; background: none;">
+      <h3 style="text-align:center; color: #ffffff;">YOU PICKED</h3>
+      <img src="">
+      <img src="scissor1.png" class="sign1">
+    </div>
+    <div class="result">
+          <h1>YOU WIN</h1>
+          <h3>AGAINST PC</h3>
+          <button onclick="playAgain()">PLAY AGAIN</button>
+    </div>
+    
+    <div class="fc">
+      <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+      
+      <img src="Paper1.png" class="sign1">
+    </div>
+    
+  </div>
+
+  <div id="lost" style="display: none;">
+    <div class="fc" >
+      <h3 style="text-align: center; color: #ffffff;">YOU PICKED</h3>
+      <img src="">
+      <img src="Paper1.png" class="sign1">
+    </div>
+    <div class="result">
+          <h1>YOU LOST</h1>
+          <h3>AGAINST PC</h3>
+          <button onclick="playAgain()">PLAY AGAIN</button>
+    </div>
+    <div class="tc" style="box-shadow: 0px 0px 10px 30px #2E9A25; border-radius: 50%;">
+      <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+      <img src="">
+      <img src="scissor1.png" class="sign1">
+    </div>
+    
+  </div>
+  <div id="tie" style="display: none;">
+    <div class="sc">
+      <h3 style="text-align: center; color: #ffffff;">YOU PICKED</h3>
+      <img src="">
+      <img src="rock1.png" class="sign1">
+    </div>
+    <div class="result">
+          <h1>TIE UP</h1>
+          <button onclick="playAgain()">REPLAY</button>
+    </div>
+    <div class="sc">
+      <H3 style="text-align: center; color: #ffffff;">PC PICKED</H3>
+      <img src="">
+      <img src="rock1.png" class="sign1">
+  </div>
+    
+  </div>
+  
+
+
+
+   
+</div> 
+    <button class="rules" onclick="gamerules()" >rules
+    </button>
+    <button id="next" style="display: none;" onclick="openNextPage()">next</button>
+    <div class="rulesinfo"> <span id="cross" onclick="gamesrules()">X</span>
+    <div class="rulecard"> <h3 style="background-color:#004429 ; color: aliceblue; font-style:monospace; text-align: center;">Game Rules</h3>
+    <li style="background-color: #004429;">Rock beats scissors, scissors beat paper, and paper beats rock.</li><br>
+    <li style="background-color: #004429;">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li><br>
+    <li style="background-color: #004429;">Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li><br>
+    <li style="background-color: #004429;">If both players lay down the same hand, each player lays down another hand</li><br>
+    
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
